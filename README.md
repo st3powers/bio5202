@@ -14,7 +14,7 @@ https://rstudio-education.github.io/hopr/index.html<br>
 https://clauswilke.com/dataviz/<br>
 
 R CHEAT SHEETS<br>
--base R (w/out packages)<>
+-base R (w/out packages)<br>
 https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf<br>
 -ggplot2<br>
 https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf
