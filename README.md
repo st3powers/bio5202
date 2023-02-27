@@ -8,8 +8,10 @@ GITHUB REPOSITORY FOR CLASS FILES<br>
 https://github.com/st3powers/bio5202
 
 SUPPORTING DOCS<br>
--Hands-On Programming with R, Grolemund
+-Hands-On Programming with R (good for begginers), Grolemund
 https://rstudio-education.github.io/hopr/index.html<br>
+-Advnaced R, 2nd edition, Wickham<br>
+https://adv-r.hadley.nz/<br>
 -Fundamentals of Data Visualization, Wilke
 https://clauswilke.com/dataviz/<br>
 
@@ -17,7 +19,11 @@ R CHEAT SHEETS<br>
 -base R (w/out packages)<br>
 https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf<br>
 -ggplot2<br>
-https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf
+https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf<br>
+-data import<br>
+https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf<br>
+-hanlding date/time objects<br>
+https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf<br>
 
 R PACKAGES<br>
 -ggplot2<br>
