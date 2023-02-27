@@ -1,6 +1,6 @@
 # 5202 class files
 
-ASSORTED LINKS
+RESOURCES...
 
 MAIN DOCS<br>
 -R for Data Science (2e), Wickham and Grolemund
