@@ -2,7 +2,8 @@
 # 2.1 Introduction
 # 2.1.1 Prerequisites 
 
-library(tidyverse)
+# install.packages("tidyverse") # You only need to do this once 
+library(tidyverse) # But you will need to load installed package every session
 #> ── Attaching core tidyverse packages ──────────────── tidyverse 2.0.0.9000 ──
 #> ✔ dplyr     1.1.0     ✔ readr     2.1.4
 #> ✔ forcats   1.0.0     ✔ stringr   1.5.0
@@ -13,9 +14,6 @@ library(tidyverse)
 #> ✖ dplyr::filter() masks stats::filter()
 #> ✖ dplyr::lag()    masks stats::lag()
 #> ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
-
-install.packages("tidyverse")
-library(tidyverse)
 
 library(palmerpenguins)
 library(ggthemes)
