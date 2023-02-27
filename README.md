@@ -16,7 +16,7 @@ https://rstudio-education.github.io/hopr/index.html<br>
 https://clauswilke.com/dataviz/<br>
 
 R CHEAT SHEETS<br>
--ggplot2
+-ggplot2<br>
 https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf
 
 R PACKAGES<br>
