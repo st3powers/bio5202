@@ -1,4 +1,4 @@
-# 5202 class files
+# Readme file for bio5202 repository
 
 MAIN DOCS<br>
 -R for Data Science (2e), Wickham and Grolemund
