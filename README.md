@@ -2,7 +2,7 @@
 
 ASSORTED LINKS
 
-MAIN DOCS
+MAIN DOCS<b>
 -R for Data Science (2e), Wickham and Grolemund
 https://r4ds.hadley.nz/
 
