@@ -19,21 +19,28 @@ emptyvector<-c()
 # using spaces can make code easier to read, without changing what the code does
 emptyvector <- c() 
 
-# make a vector of numerical data manually
+# make two vectors of numerical data manually
 nums <- c(3,5,4,7,9,5,11)
 
 # genarate a vector of evenly spaced values
 nums_seq <- seq(from=0,by=10,to=1000)
 
 # make a vector of character data manually
-chars <- c("a","b","ab","1","01","c","other")
+chars <- c("a","b","ab","1","01","A","other")
 
 # show length of created objects
 length(nums)
 length(chars)
 
+# identify which items are in contained in another object
+chars %in% c("apples","organges", "other")
+
+# identify items that contain the letter "a"
+grep("a",chars,ignore.case=TRUE)
+grep("a",chars,ignore.case=FALSE)
+
 # convert character vector to a "factor" object
-chars_factor <- as.factor(c("a","b","ab","1","01","c","other"))
+chars_factor <- as.factor(chars)
 
 # generate a vector of 100 values with mean = 1 and standard deviation of 0.25
 nums_rnorm <- rnorm(mean=1,sd=0.25,n=100)
@@ -78,6 +85,9 @@ class(chars_factor)
 # list all active objects in current R session
 ls()
 
+# tidyverse coming soon...
+
+
 # coming soon...
 
 # read.csv()
@@ -85,4 +95,5 @@ ls()
 # write.csv()
 # ggsave()
 # png()
+
 
