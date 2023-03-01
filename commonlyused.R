@@ -84,6 +84,11 @@ df[1:2,]
 df[c(1,2),]
 head(df,2)
 
+# How many rows in a dataframe (or tibble)?
+nrow(df)
+# How many columns in a dataframe (or tibble)?
+ncol(df)
+
 # show the class (object type) of a saved object
 # typical classes are dataframe, tibble (tidyverse), numeric vector, character vector, factor
 class(df)
