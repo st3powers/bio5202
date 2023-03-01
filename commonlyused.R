@@ -59,6 +59,11 @@ print(df)
 # check the column names of a dataframe
 names(df)
 
+# view the first 6 rows of a dataframe (or tibble)
+head(df)
+#view the last 2 rows of a dataframe (or tibble)
+tail(df,2)
+
 # use $ to call a single column of a dataframe
 df$nums
 
@@ -74,6 +79,10 @@ df[,1:2]
 df[1,]
 # second row only
 df[2,]
+# first two rows only (example of many paths to the same goal)
+df[1:2,]
+df[c(1,2),]
+head(df,2)
 
 # show the class (object type) of a saved object
 # typical classes are dataframe, tibble (tidyverse), numeric vector, character vector, factor
