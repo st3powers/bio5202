@@ -76,7 +76,7 @@ df[1,]
 df[2,]
 
 # show the class (object type) of a saved object
-# typical classes are dataframe, numeric vector, character vector, or factor
+# typical classes are dataframe, tibble (tidyverse), numeric vector, character vector, factor
 class(df)
 class(nums)
 class(chars)
