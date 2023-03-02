@@ -20,6 +20,8 @@ https://adv-r.hadley.nz/<br>
 https://clauswilke.com/dataviz/<br>
 
 R CHEAT SHEETS<br>
+-old school R ref card #yourwelcome <br>
+https://cran.r-project.org/doc/contrib/Short-refcard.pdf<br>
 -base R (w/out packages)<br>
 https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf<br>
 -ggplot2<br>
