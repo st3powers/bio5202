@@ -99,15 +99,43 @@ class(chars_factor)
 # list all active objects in current R session
 ls()
 
-# tidyverse coming soon...
 
 
-# coming soon...
+# A grand list of all the R functions (base R, no packages)
+ls("package:base")
+# A list of all the R functions of the package dplyr
+ls("package:dplyr")
+
+
+
+# reading data
+
+# if the files are located in your working directory
+students_classic<-read.csv("students.csv")
+students_tidy <- read_csv("students.csv") 
+students_tidy_tsv <- read_tsv("students_tsv.txt")
+students_tidy_txt <- read_csv("students.txt")
+
+# if the files are located in a subfolder of your working directory
+students_classic<-read.csv("data/students2.csv")
+students_tidy <- read_csv("data/students2.csv") 
+students_tidy_tsv <- read_tsv("data/students2_tsv.txt")
+students_tidy_txt <- read_csv("data/students2.txt")
+
+# if the files are served on a website
+students_tody <- read_csv("https://pos.it/r4ds-students-csv")
+
 
 # read.csv()
 # fread()
+
+# coming soon
 # write.csv()
 # ggsave()
 # png()
 
+students <- read_csv("https://pos.it/r4ds-students-csv")
+
+
+# tidyverse coming soon...
 
