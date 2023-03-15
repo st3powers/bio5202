@@ -1,6 +1,8 @@
 
 # load an already installed package
 library(ggplot2)
+library(tidyverse)
+library(data.table)
 
 # review the help files for any function
 # use liberally !!  
@@ -110,24 +112,43 @@ ls("package:dplyr")
 
 # reading data
 
-# if the files are located in your working directory
+# if the files are located in your working directory (multiple ways)
 students_classic<-read.csv("students.csv")
-students_tidy <- read_csv("students.csv") 
+students_tidy_csv <- read_csv("students.csv") 
 students_tidy_tsv <- read_tsv("students_tsv.txt")
 students_tidy_txt <- read_csv("students.txt")
+students_fread <- fread("students.csv") 
+# note that fread function is much faster for reading large files (tens of MB or larger)
 
-# if the files are located in a subfolder of your working directory
+# if the files are located in a subfolder of your working directory (multiple ways)
 students_classic<-read.csv("data/students2.csv")
-students_tidy <- read_csv("data/students2.csv") 
+students_tidy_csv <- read_csv("data/students2.csv") 
 students_tidy_tsv <- read_tsv("data/students2_tsv.txt")
 students_tidy_txt <- read_csv("data/students2.txt")
+students_fread <- fread("data/students2.csv") 
 
-# if the files are served on a website
-students_tody <- read_csv("https://pos.it/r4ds-students-csv")
+# To directly load data files from on a web location (multiple ways)
+students_tidy <- read_csv("https://pos.it/r4ds-students-csv")
+students_github_tidy <- read_csv('https://raw.githubusercontent.com/st3powers/bio5202/main/students.csv')
 
+url<-"https://raw.githubusercontent.com/st3powers/bio5202/main/students.csv"
+daterr0<-fread(url, header =  TRUE, sep = ',' , stringsAsFactors=FALSE,
+               colClasses="character")
 
-# read.csv()
-# fread()
+# to batch read multiple files from the working directory (root), useful when you have many files
+filenames<-list.files() # list all file names
+filenames_csvtxt<-filenames[grep(".csv|.txt", filenames)] # restrict to filenames ending in .csv or .txt
+data_list<-lapply(filenames_csvtxt,FUN="fread") # read each txt or csv file iteratively into a list object
+names(data_list)<-filenames_csvtxt # add names to each item in the list
+data_list$students.csv 
+
+# to batch read multiple files from a subfolder, useful when you have many files
+filenames<-list.files("./data") # list all file names located in the 'data' subfolder
+filenames_csvtxt<-filenames[grep(".csv|.txt", filenames)] # restrict to filenames ending in .csv or .txt
+filenames_csvtxt_longpath<-paste("./data/",filenames_csvtxt,sep="") # create long form of file paths, with subfolder 'data'
+data_list<-lapply(filenames_csvtxt_longpath,FUN="fread") # read each txt or csv file iteratively into a list object
+names(data_list)<-filenames_csvtxt # add names to each item in the list
+data_list$students2.csv 
 
 # coming soon
 # write.csv()
