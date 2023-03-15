@@ -19,6 +19,10 @@ https://adv-r.hadley.nz/<br>
 -Fundamentals of Data Visualization, Wilke
 https://clauswilke.com/dataviz/<br>
 
+DIRECTORY OF VISUALIZATIONS<br>
+https://clauswilke.com/dataviz/directory-of-visualizations.html<br>
+from Ch 5 of Wilke<br>
+
 R CHEAT SHEETS<br>
 -old school R ref card #yourwelcome <br>
 https://cran.r-project.org/doc/contrib/Short-refcard.pdf<br>
