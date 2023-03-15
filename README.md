@@ -14,11 +14,11 @@ Rstudio https://posit.co/download/rstudio-desktop/
 SUPPORTING DOCS<br>
 -Hands-On Programming with R (good for begginers), Grolemund
 https://rstudio-education.github.io/hopr/index.html<br>
--Advnaced R, 2nd edition, Wickham<br>
+-Advnaced R, 2nd edition, Wickham
 https://adv-r.hadley.nz/<br>
 -Fundamentals of Data Visualization, Wilke
 https://clauswilke.com/dataviz/<br>
--directory of visualizations, Wilke Ch 5 https://clauswilke.com/dataviz/directory-of-visualizations.html<br>
+-Directory of visualizations, Wilke Ch 5 https://clauswilke.com/dataviz/directory-of-visualizations.html<br>
 
 R CHEAT SHEETS<br>
 -old school R ref card #yourwelcome <br>
