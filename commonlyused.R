@@ -4,6 +4,7 @@ library(ggplot2)
 library(tidyverse)
 library(data.table)
 library(ggthemes)
+library(readxl)
 
 # review the help files for any function
 # use liberally !!  
@@ -118,6 +119,7 @@ students_classic<-read.csv("students.csv")
 students_tidy_csv <- read_csv("students.csv") 
 students_tidy_tsv <- read_tsv("students_tsv.txt")
 students_tidy_txt <- read_csv("students.txt")
+students_xlsx <- read_excel("students.xlsx") 
 students_fread <- fread("students.csv") 
 # note that fread function is much faster for reading large files (tens of MB or larger)
 
@@ -126,6 +128,7 @@ students_classic<-read.csv("data/students2.csv")
 students_tidy_csv <- read_csv("data/students2.csv") 
 students_tidy_tsv <- read_tsv("data/students2_tsv.txt")
 students_tidy_txt <- read_csv("data/students2.txt")
+students_xlsx <- read_excel("data/students.xlsx") 
 students_fread <- fread("data/students2.csv") 
 
 # To directly load data files from on a web location (multiple ways)
