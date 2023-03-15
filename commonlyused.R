@@ -3,6 +3,7 @@
 library(ggplot2)
 library(tidyverse)
 library(data.table)
+library(ggthemes)
 
 # review the help files for any function
 # use liberally !!  
@@ -110,7 +111,7 @@ ls("package:dplyr")
 
 
 
-# reading data
+# reading in data
 
 # if the files are located in your working directory (multiple ways)
 students_classic<-read.csv("students.csv")
@@ -150,12 +151,33 @@ data_list<-lapply(filenames_csvtxt_longpath,FUN="fread") # read each txt or csv 
 names(data_list)<-filenames_csvtxt # add names to each item in the list
 data_list$students2.csv 
 
-# coming soon
-# write.csv()
-# ggsave()
-# png()
 
-students <- read_csv("https://pos.it/r4ds-students-csv")
+# exporting data 
+write.csv(students_tidy_csv,"data_export.csv")
+
+# exporting plots using ggsave(), png(), or tiff()
+plot_default<-ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point()+
+  theme_bw()
+
+plot_colorfriendly<-ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point()+
+  scale_color_colorblind()+
+  theme_bw()
+
+ggsave(filename="plot_colorfriendly.png",plot_colorfriendly,
+       width=5,height=4,units="in")
+ggsave(filename="plot_colorfriendly.tiff",plot_colorfriendly,
+       width=5,height=4,units="in")
+
+png(filename="plot_colorfriendly.png", width=5,height=4,units="in",res=300)
+plot_colorfriendly
+dev.off()
+
+tiff(filename="plot_colorfriendly.tiff", width=5,height=4,units="in",res=300)
+plot_colorfriendly
+dev.off()
+
 
 
 # tidyverse coming soon...
