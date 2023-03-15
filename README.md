@@ -18,10 +18,7 @@ https://rstudio-education.github.io/hopr/index.html<br>
 https://adv-r.hadley.nz/<br>
 -Fundamentals of Data Visualization, Wilke
 https://clauswilke.com/dataviz/<br>
-
-DIRECTORY OF VISUALIZATIONS<br>
-https://clauswilke.com/dataviz/directory-of-visualizations.html<br>
-from Ch 5 of Wilke<br>
+-directory of visualizations, Wilke Ch 5 https://clauswilke.com/dataviz/directory-of-visualizations.html<br>
 
 R CHEAT SHEETS<br>
 -old school R ref card #yourwelcome <br>
