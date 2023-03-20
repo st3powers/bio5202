@@ -1,7 +1,7 @@
 
 library(tidyverse)
 
-students <- read_csv("data/students.csv")
+students <- read_csv("data/students2.csv")
 #> Rows: 6 Columns: 5
 #> ── Column specification ─────────────────────────────────────────────────────
 #> Delimiter: ","
