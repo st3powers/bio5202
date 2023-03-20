@@ -182,6 +182,22 @@ plot_colorfriendly
 dev.off()
 
 
+mytable1<-tribble(
+  ~one,~two,~three,
+  "a",1,9,
+  "a",2,5,
+  "b",3,5,
+  "b",8,2,
+  "b",2,7,
+  "c",3,3
+)
 
-# tidyverse coming soon...
+mytable2<-tribble(
+  ~one,~four,
+  "a","animals",
+  "b","beatles",
+  "c","cranberries"
+)
+
+merge(mytable1,mytable2,by="one")
 
