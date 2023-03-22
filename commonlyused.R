@@ -181,6 +181,16 @@ tiff(filename="plot_colorfriendly.tiff", width=5,height=4,units="in",res=300)
 plot_colorfriendly
 dev.off()
 
+# learn more about ggplot shape and line type options
+vignette("ggplot2-specs")
+#https://cran.r-project.org/web/packages/ggplot2/vignettes/ggplot2-specs.html
+#https://ggplot2.tidyverse.org/reference/
+
+# check out geom_errorbar, geom_pointrange, geom_col
+
+df <- data.frame(trt = c("a", "b", "c"), outcome = c(2.3, 1.9, 3.2))
+ggplot(df, aes(trt, outcome)) +
+  geom_col()
 
 mytable1<-tribble(
   ~one,~two,~three,
