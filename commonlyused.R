@@ -211,3 +211,4 @@ mytable2<-tribble(
 
 merge(mytable1,mytable2,by="one")
 
+
