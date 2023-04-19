@@ -23,7 +23,7 @@ https://clauswilke.com/dataviz/<br>
 -ggplot aesthetic (aes) options https://cran.r-project.org/web/packages/ggplot2/vignettes/ggplot2-specs.html<br>
 -FAIR data principles (Scientific Data, 2016) https://www.nature.com/articles/sdata201618 <br>
 -more about FAIR https://www.go-fair.org/fair-principles/<br>
--Science Mag data policy (in Editorial Guidlines) https://www.science.org/content/page/science-journals-editorial-policies#data-and-materials-after-publication<br>
+-Science Mag data policy (in Editorial Guidlines) https://www.science.org/content/page/science-journals-editorial-policies#data-and-code-deposition<br>
 
 R CHEAT SHEETS<br>
 -old school R ref card #yourwelcome <br>
