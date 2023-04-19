@@ -21,6 +21,9 @@ https://clauswilke.com/dataviz/<br>
 -Directory of visualizations, Wilke Ch 5 https://clauswilke.com/dataviz/directory-of-visualizations.html<br>
 -ggplot function reference and geom types https://ggplot2.tidyverse.org/reference/<br>
 -ggplot aesthetic (aes) options https://cran.r-project.org/web/packages/ggplot2/vignettes/ggplot2-specs.html<br>
+-FAIR data principles (Scientific Data, 2016) https://www.nature.com/articles/sdata201618 <br>
+-more about FAIR https://www.go-fair.org/fair-principles/
+-Science Mag data policy (in Editorial Guidlines) https://www.science.org/content/page/science-journals-editorial-policies#data-and-materials-after-publication<br>
 
 R CHEAT SHEETS<br>
 -old school R ref card #yourwelcome <br>
@@ -45,5 +48,9 @@ ONLINE TRAINING<br>
 -Udemy<br>
 https://www.udemy.com/<br>
 https://www.udemy.com/course/r-programming-course-for-absolute-beginners/<br>
+
+SHARED DOCS<br>
+https://docs.google.com/document/d/1I225WqiWnzy6MpkPzj8KP3Q1ciz_XuYh23Oj_7QDjlE/edit?usp=sharing><br>
+
 
  

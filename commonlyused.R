@@ -212,3 +212,36 @@ mytable2<-tribble(
 merge(mytable1,mytable2,by="one")
 
 
+# statistical support 
+
+# differences between groups
+# are there any differences 
+aov1 <- aov(Petal.Length~Species,data=iris)
+summary(aov1)
+# or
+aov(Petal.Length~Species,data=iris) %>% 
+  summary()
+
+TukeyHSD(aov1)
+# or
+aov(Petal.Length~Species,data=iris) %>% 
+  summary() %>% TukeyHSD()
+
+# Is there a significant linear relationship?
+lm1 <- lm(Sepal.Length~Petal.Length,data=iris)
+summary(lm1)
+
+# Test for linear relationships within different groups of data
+library(nlme)
+lm_bygroup <- lmList(Sepal.Length~Petal.Length | Species,data=iris)
+summary(lm_bygroup)
+
+
+
+
+
+
+
+
+
+
