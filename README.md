@@ -49,7 +49,7 @@ ONLINE TRAINING<br>
 https://www.udemy.com/<br>
 https://www.udemy.com/course/r-programming-course-for-absolute-beginners/<br>
 
-SHARED DOCS<br>
+LIVE DOCS<br>
 https://docs.google.com/document/d/1I225WqiWnzy6MpkPzj8KP3Q1ciz_XuYh23Oj_7QDjlE/edit?usp=sharing><br>
 
 
