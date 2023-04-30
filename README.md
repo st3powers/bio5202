@@ -7,7 +7,7 @@ https://r4ds.hadley.nz/
 GITHUB REPOSITORY FOR CLASS FILES<br>
 https://github.com/st3powers/bio5202
 
-GETTING STARTED>br>
+GETTING STARTED<br>
 R https://cloud.r-project.org/<br>
 Rstudio https://posit.co/download/rstudio-desktop/
 
