@@ -231,10 +231,20 @@ aov(Petal.Length~Species,data=iris) %>%
 lm1 <- lm(Sepal.Length~Petal.Length,data=iris)
 summary(lm1)
 
+# diagnostic plots of linear regression models
+plot(lm1) # if you want to toggle through several different diagnostic plots
+plot(lm1, which=1) # if you want just the residuals vs. fitted plot
+plot(lm1, which=2) # if you want just the qq plot
+
 # Test for linear relationships within different groups of data
 library(nlme)
 lm_bygroup <- lmList(Sepal.Length~Petal.Length | Species,data=iris)
 summary(lm_bygroup)
+
+# clear everything - remove all loaded objects from the current session/environment
+rm(list = ls())
+
+
 
 
 
