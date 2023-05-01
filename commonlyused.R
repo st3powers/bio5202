@@ -17,6 +17,9 @@ getwd()
 
 # Note that you can use setwd() to set working directory manually
 
+# clear everything - remove all loaded objects from the current session/environment
+rm(list = ls())
+
 # use  <-  to assign names to things
 emptyvector<-c()
 
