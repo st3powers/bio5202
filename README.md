@@ -33,7 +33,7 @@ https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf<br>
 -ggplot2<br>
 https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf<br>
 -data import<br>
-https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf<br>
+https://github.com/rstudio/cheatsheets/blob/main/data-import.pdf<br>
 -handling date/time objects<br>
 https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf<br>
 
