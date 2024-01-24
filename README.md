@@ -50,8 +50,5 @@ ONLINE TRAINING<br>
 https://www.udemy.com/<br>
 https://www.udemy.com/course/r-programming-course-for-absolute-beginners/<br>
 
-PUBLISHED DATASETS<br>
-https://portal.edirepository.org/nis/mapbrowse?packageid=edi.1443.1
-
 SURVEYS<br>
 https://docs.google.com/forms/d/e/1FAIpQLScMlDfp8ZANXNx711tFRA4lDBKVEKdBF8yr5crTEHGJ-c9Gig/viewform?usp=sf_link
