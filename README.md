@@ -24,6 +24,7 @@ https://clauswilke.com/dataviz/<br>
 -FAIR data principles (Scientific Data, 2016) https://www.nature.com/articles/sdata201618 <br>
 -more about FAIR https://www.go-fair.org/fair-principles/<br>
 -Science Mag data policy (in Editorial Guidlines) https://www.science.org/content/page/science-journals-editorial-policies#data-and-code-deposition<br>
+-One by yours truly https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/eap.1822<br>
 
 R CHEAT SHEETS<br>
 -old school R ref card #yourwelcome <br>
