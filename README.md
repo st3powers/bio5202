@@ -39,6 +39,10 @@ https://github.com/rstudio/cheatsheets/blob/main/data-import.pdf<br>
 https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf<br>
 
 R PACKAGES<br>
+-list of common packages<br>
+https://support.posit.co/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages<br>
+-grand list of packages<br>
+https://cran.r-project.org/web/packages/available_packages_by_name.html<br>
 -ggplot2<br>
 https://ggplot2.tidyverse.org/<br>
 https://cran.r-project.org/web/packages/ggplot2/ggplot2.pdf<br>
