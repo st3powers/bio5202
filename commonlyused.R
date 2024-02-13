@@ -142,6 +142,22 @@ url<-"https://raw.githubusercontent.com/st3powers/bio5202/main/students.csv"
 students_fread<-fread(url, header =  TRUE, sep = ',' , stringsAsFactors=FALSE,
                colClasses="character")
 
+# read in a large csv file (>400 MB)
+url<-"https://github.com/waterfolk/NLAdata/raw/master/daterr.csv"
+then<-now()
+bigdata_fread<-fread(url, header =  TRUE, sep = ',' , stringsAsFactors=FALSE,
+                      colClasses="character")
+now() - then
+
+# alternatives to fread(), which are usually slower, sometimes by lot
+then<-now()
+bigdata_read_csv<-read_csv(url)
+now() -then
+
+then<-now()
+bigdata_read.csv<-read.csv(url)
+now() -then
+
 # to batch read multiple files from the working directory (root), useful when you have many files
 filenames<-list.files() # list all file names
 filenames_csvtxt<-filenames[grep(".csv|.txt", filenames)] # restrict to filenames ending in .csv or .txt
@@ -156,7 +172,6 @@ filenames_csvtxt_longpath<-paste("./data/",filenames_csvtxt,sep="") # create lon
 data_list<-lapply(filenames_csvtxt_longpath,FUN="fread") # read each txt or csv file iteratively into a list object
 names(data_list)<-filenames_csvtxt # add names to each item in the list
 data_list$students2.csv 
-
 
 # exporting data 
 write.csv(students_tidy_csv,"data_export.csv")
