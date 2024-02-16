@@ -107,12 +107,10 @@ class(chars_factor)
 ls()
 
 
-
 # A grand list of all the R functions (base R, no packages)
 ls("package:base")
 # A list of all the R functions of the package dplyr
 ls("package:dplyr")
-
 
 
 # reading in data
@@ -199,16 +197,11 @@ tiff(filename="plot_colorfriendly.tiff", width=5,height=4,units="in",res=300)
 plot_colorfriendly
 dev.off()
 
-# learn more about ggplot shape and line type options
-vignette("ggplot2-specs")
-#https://cran.r-project.org/web/packages/ggplot2/vignettes/ggplot2-specs.html
-#https://ggplot2.tidyverse.org/reference/
 
-# check out geom_errorbar, geom_pointrange, geom_col
+# clear everything - remove all loaded objects from the current session/environment
+rm(list = ls())
 
-df <- data.frame(trt = c("a", "b", "c"), outcome = c(2.3, 1.9, 3.2))
-ggplot(df, aes(trt, outcome)) +
-  geom_col()
+# a way to create tables 'manually'
 
 mytable1<-tribble(
   ~one,~two,~three,
@@ -227,49 +220,52 @@ mytable2<-tribble(
   "c","cranberries"
 )
 
-merge(mytable1,mytable2,by="one")
+
+# tallying up various summary stats
+library(nycflights13)
+
+# mean, max, min
+flights %>% group_by(year,carrier) %>%
+  summarize(count = length(year),
+            air_time_mean = mean(air_time, na.rm=TRUE),
+            air_time_max = max(air_time, na.rm=TRUE),
+            air_time_min = min(air_time, na.rm=TRUE)) %>% View()
+
+# percentiles
+flights %>% group_by(year,carrier) %>%
+  summarize(
+    pct_5th = quantile(air_time, probs = 0.05, na.rm=TRUE),
+    pct_25th = quantile(air_time, probs = 0.25, na.rm=TRUE),
+    pct_50th  = quantile(air_time, probs = 0.5, na.rm=TRUE),
+    pct_75th = quantile(air_time, probs = 0.75, na.rm=TRUE),
+    pct_95th = quantile(air_time, probs = 0.95, na.rm=TRUE)) %>% 
+  View()
 
 
-# statistical support 
+# reshaping data
 
-# differences between groups
-# are there any differences 
-aov1 <- aov(Petal.Length~Species,data=iris)
-summary(aov1)
-# or
-aov(Petal.Length~Species,data=iris) %>% 
-  summary()
+# make longer with only one value per row
+# this is the dplyr way
 
-TukeyHSD(aov1)
-# or
-aov(Petal.Length~Species,data=iris) %>% 
-  summary() %>% TukeyHSD()
+flights_long <- flights %>%
+  pivot_longer(
+    cols = where(is.numeric),
+    names_to = "variable",
+    values_to = "value") %>% as.data.frame()
 
-# Is there a significant linear relationship?
-lm1 <- lm(Sepal.Length~Petal.Length,data=iris)
-summary(lm1)
+View(flights_long)
 
-# diagnostic plots of linear regression models
-plot(lm1) # if you want to toggle through several different diagnostic plots
-plot(lm1, which=1) # if you want just the residuals vs. fitted plot
-plot(lm1, which=2) # if you want just the qq plot
+# another way to make longer with only one value per row
+# this is the old school way that using reshape2::melt() which has helpful defaults
+library(reshape2)
+flights_long2 <- melt(flights)
 
-# Test for linear relationships within different groups of data
-library(nlme)
-lm_bygroup <- lmList(Sepal.Length~Petal.Length | Species,data=iris)
-summary(lm_bygroup)
+View(flights_long2)
 
-# clear everything - remove all loaded objects from the current session/environment
-rm(list = ls())
-
-
-
-
-
-
-
-
-
-
+# reshape long data into wide data
+# note that the original flights data frame is already wide data
+# but this shows a way to get wide data if didn't already have it
+flights_wide <- flights_long %>% pivot_wider(names_from=variable,
+                             values_from=value)
 
 
