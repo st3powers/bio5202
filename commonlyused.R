@@ -5,6 +5,7 @@ library(tidyverse)
 library(data.table)
 library(ggthemes)
 library(readxl)
+library(janitor) # check out clean_names function to clean up column names
 
 # review the help files for any function
 # use liberally !!  
@@ -241,6 +242,12 @@ flights %>% group_by(year,carrier) %>%
     pct_95th = quantile(air_time, probs = 0.95, na.rm=TRUE)) %>% 
   View()
 
+# succint ways to summarize multiple columns of numeric data, without naming every column
+
+iris %>% group_by(Species) %>% 
+  select_if(is.numeric) %>%
+  summarize_all(list(mean=mean,med=median,ct=length)) %>% 
+  View()
 
 # reshaping data
 
