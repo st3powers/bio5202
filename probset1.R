@@ -75,12 +75,12 @@ library(tidyverse)
 #list dplyr functions
 ls("package:dplyr")
 
-#restrict list function to 6 elements (Bailey)
+#restrict list function to 6 elements
 ls("package:dplyr") |> head(n=6)
 
 #3b
 library(tidyverse)
-#restrict list function to 6 elements (Bailey)
+#restrict list function to 6 elements
 thing<-ls("package:dplyr") |> head(n=6)
 class(thing)
 
