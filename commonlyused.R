@@ -297,11 +297,16 @@ data$datecollect_format_ymd<- format(lubridate::mdy(data$datecollect), "%Y-%m-%d
 
 #####################################
 
-# factors, and reordering of factors
+# factors, and releveling of factors
 
 data$system_factor <-  factor(data$system)
 levels(data$system_factor)
 data$system_factor_reordered<-relevel(data$system_factor, ref = "Waco Cr")
 levels(data$system_factor_reordered)
 
+data2 <- data %>% filter(system %in% c("Brazos River", "Fort Parker Lake", "Lake Arrowhead")) 
+data2$system_factor <-  factor(data2$system)
+levels(data2$system_factor)
+data2$system_factor_reordered<-factor(data2$system, levels=c("Fort Parker Lake","Lake Arrowhead","Brazos River"))
+levels(data2$system_factor_reordered)
 
