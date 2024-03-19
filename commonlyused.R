@@ -275,4 +275,33 @@ View(flights_long2)
 flights_wide <- flights_long %>% pivot_wider(names_from=variable,
                              values_from=value)
 
+#####################################################
+
+# handling dates
+
+library(data.table)
+library(anytime)
+PATH<-"https://raw.githubusercontent.com/waterfolk/waterfolkdata/main/samples.csv"
+data<-fread(PATH)
+
+names(data)
+head(data$datecollect)
+anytime::anydate(data$datecollect)
+data$datecollect_format<- anytime::anydate(data$datecollect)
+
+# alternatively 
+
+library(lubridate)
+format(lubridate::mdy(data$datecollect), "%Y-%m-%d")
+data$datecollect_format_ymd<- format(lubridate::mdy(data$datecollect), "%Y-%m-%d")
+
+#####################################
+
+# factors, and reordering of factors
+
+data$system_factor <-  factor(data$system)
+levels(data$system_factor)
+data$system_factor_reordered<-relevel(data$system_factor, ref = "Waco Cr")
+levels(data$system_factor_reordered)
+
 
