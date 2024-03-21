@@ -310,3 +310,32 @@ levels(data2$system_factor)
 data2$system_factor_reordered<-factor(data2$system, levels=c("Fort Parker Lake","Lake Arrowhead","Brazos River"))
 levels(data2$system_factor_reordered)
 
+##################################################
+
+# Functions
+
+# Coefficient of Variation (CV)
+CV <- function(x, na.rm = FALSE) {
+  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)
+}
+
+CV(iris$Sepal.Length)
+
+iris %>% select(Species, Sepal.Length) %>%
+  group_by(Species) %>%
+  summarize(cv=CV(Sepal.Length))
+
+# Mean Absolute Deviation (MAD)
+mad <- function(x) {
+  mean(abs(x - mean(x)))
+}
+
+mad(iris$Sepal.Length)
+
+# Custom function to plot histogram with specified binwidth
+plot_custom_hist <- function(data, binwidth) {
+  hist(data, breaks = seq(min(data), max(data) + binwidth, by = binwidth),
+       main = "Histogram with Custom Bins", xlab = "Value", ylab = "Frequency")
+}
+
+plot_custom_hist(iris$Sepal.Length, 0.5)
