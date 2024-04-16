@@ -339,3 +339,34 @@ plot_custom_hist <- function(data, binwidth) {
 }
 
 plot_custom_hist(iris$Sepal.Length, 0.5)
+
+########################################################
+
+# statistical support 
+
+# differences between groups
+# are there any differences 
+aov1 <- aov(Petal.Length~Species,data=iris)
+summary(aov1)
+# or
+aov(Petal.Length~Species,data=iris) %>% 
+  summary()
+
+TukeyHSD(aov1)
+# or
+aov(Petal.Length~Species,data=iris) %>% 
+  summary() %>% TukeyHSD()
+
+# Is there a significant linear relationship?
+lm1 <- lm(Sepal.Length~Petal.Length,data=iris)
+summary(lm1)
+
+# diagnostic plots of linear regression models
+plot(lm1) # if you want to toggle through several different diagnostic plots
+plot(lm1, which=1) # if you want just the residuals vs. fitted plot
+plot(lm1, which=2) # if you want just the qq plot
+
+# Test for linear relationships within different groups of data
+library(nlme)
+lm_bygroup <- lmList(Sepal.Length~Petal.Length | Species,data=iris)
+summary(lm_bygroup)
