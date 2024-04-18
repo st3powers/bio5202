@@ -370,3 +370,32 @@ plot(lm1, which=2) # if you want just the qq plot
 library(nlme)
 lm_bygroup <- lmList(Sepal.Length~Petal.Length | Species,data=iris)
 summary(lm_bygroup)
+
+# Fit a nonlinear model to data, report the model coefficients, and make model predictions
+
+library(tidyverse)
+
+data<-read_csv("https://raw.githubusercontent.com/st3powers/turbsat/main/sampledata.csv")
+data_wide<-data %>% select(-unit) %>% pivot_wider(names_from=variable,values_from=value)
+
+# Fit a nonlinear model to the data
+negative_power<-nls(secchi ~ 1/(a + turbidity^b), data = data_wide, start=list(a=1,b=1))
+summary(negative_power)
+
+# make predictions from the model
+turbidity_gradient <- seq(min(data_wide$turbidity),max(data_wide$turbidity),length=1000)
+predicted_secchi <- predict(negative_power,newdata=data.frame(turbidity=turbidity_gradient))
+preds_df<- data.frame(turbidity_gradient, predicted_secchi)
+
+# Plot the data and predictions from the fitted curve, old style
+plot(secchi ~ turbidity, data = data_wide,pch = 19)
+lines(predicted_secchi ~ turbidity_gradient, data= preds_df,col = "blue", lwd = 2)
+
+# and ggplot style
+data_wide %>% 
+  ggplot(aes(x=turbidity,y=secchi)) +
+  geom_line(data=preds_df,aes(x=turbidity_gradient,predicted_secchi),color="blue") +
+  geom_point() +
+  theme_bw()
+
+
