@@ -342,7 +342,7 @@ plot_custom_hist(iris$Sepal.Length, 0.5)
 
 ########################################################
 
-# statistical support 
+# statistics and models
 
 # differences between groups
 # are there any differences 
@@ -355,7 +355,7 @@ aov(Petal.Length~Species,data=iris) %>%
 TukeyHSD(aov1)
 # or
 aov(Petal.Length~Species,data=iris) %>% 
-  summary() %>% TukeyHSD()
+  TukeyHSD()
 
 # Is there a significant linear relationship?
 lm1 <- lm(Sepal.Length~Petal.Length,data=iris)
@@ -368,7 +368,7 @@ plot(lm1, which=2) # if you want just the qq plot
 
 # Test for linear relationships within different groups of data
 library(nlme)
-lm_bygroup <- lmList(Sepal.Length~Petal.Length | Species,data=iris)
+lm_bygroup <- lmList(Sepal.Length~Petal.Length | Species,data=iris) 
 summary(lm_bygroup)
 
 # Fit a nonlinear model to data, report the model coefficients, and make model predictions
