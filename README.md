@@ -55,4 +55,7 @@ https://www.udemy.com/<br>
 https://www.udemy.com/course/r-programming-course-for-absolute-beginners/<br>
 
 SURVEYS<br>
+Introduce yourself<br>
 https://docs.google.com/forms/d/e/1FAIpQLScMlDfp8ZANXNx711tFRA4lDBKVEKdBF8yr5crTEHGJ-c9Gig/viewform?usp=sf_link
+Questions log<br>
+https://docs.google.com/forms/d/e/1FAIpQLSd_iR91RfnE7VnI9LXgT_3rpUtqogS4f8XcS6UR8U274N5OXg/viewform?usp=header
