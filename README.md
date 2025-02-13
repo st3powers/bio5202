@@ -58,4 +58,8 @@ SURVEYS<br>
 Introduce yourself<br>
 https://docs.google.com/forms/d/e/1FAIpQLScMlDfp8ZANXNx711tFRA4lDBKVEKdBF8yr5crTEHGJ-c9Gig/viewform?usp=sf_link<br>
 Questions log<br>
-https://docs.google.com/forms/d/e/1FAIpQLSd_iR91RfnE7VnI9LXgT_3rpUtqogS4f8XcS6UR8U274N5OXg/viewform?usp=header
+https://docs.google.com/forms/d/e/1FAIpQLSd_iR91RfnE7VnI9LXgT_3rpUtqogS4f8XcS6UR8U274N5OXg/viewform?usp=header<br>
+
+QUESTIONS<br>
+Advantages and disadvantages of using pipes<br>
+https://chatgpt.com/share/67ae23ee-2af8-8008-b604-f3684cf6caa6<br>
