@@ -31,7 +31,7 @@ ggplot(
   geom_point(aes(color = species, shape = species)) +
   geom_smooth(method = "lm") +
   labs(
-    title = "Body mass and flipper length",
+    title = "Stephen Powers",
     subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
     x = "Flipper length (mm)", y = "Body mass (g)",
     color = "Species", shape = "Species"
@@ -123,13 +123,13 @@ class(scholar_v2$value) #value = num
 #total citations in 2024
 scholar_v2 |>
   filter(indicator == "cited2024") |>
-  summarise(total_cit_2022 = sum(value, na.rm = TRUE))
+  summarise(total_cit_2024 = sum(value, na.rm = TRUE))
 
 #4b
 library(tidyverse)
 
 #load CSV
-scholar_v2 <- read_csv('https://raw.githubusercontent.com/st3powers/bio5202/main/scholar_v2.csv')
+scholar_v2 <- read_csv('https://raw.githubusercontent.com/st3powers/bio5202/main/data/scholar_v2.csv')
 
 scholar_v2 |>
   filter(indicator %in% c("cited2021","cited2022","cited2023")) |>
