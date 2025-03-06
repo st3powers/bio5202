@@ -220,6 +220,27 @@ mytable2<-tribble(
 
 merge(mytable1,mytable2,by="one")
 
+# point and range plot using stat_summary()
+
+ggplot(diamonds) + 
+  stat_summary(
+    aes(x = cut, y = depth),
+    fun.min = min,
+    fun.max = max,
+    fun = median
+  )
+
+# 95 % confidence interval plot
+
+ggplot(diamonds) + 
+  stat_summary(
+    aes(x = cut, y = depth),
+    fun = median,
+    fun.min = function(y) quantile(y, 0.025),  # Lower bound of 95% CI
+    fun.max = function(y) quantile(y, 0.975),  # Upper bound of 95% CI
+    geom = "pointrange"
+  )
+
 
 ######################################################
 
