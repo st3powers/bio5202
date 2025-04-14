@@ -241,6 +241,22 @@ ggplot(diamonds) +
     geom = "pointrange"
   )
 
+# custom functions
+some_function <- function(){
+  print("hello world")
+}
+
+some_other_function <- function(whattodo="this"){
+  
+  if(whattodo=="this"){
+    print("hello world")
+  }
+  if(whattodo=="that"){
+    print("goodbye world")
+  }
+  
+}
+
 
 ######################################################
 
