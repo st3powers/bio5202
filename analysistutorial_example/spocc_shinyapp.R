@@ -1,8 +1,15 @@
+# This script codes the spocc shiny app
+# Note that one scripting strategy for shiny apps not employed here,
+# is to separate the app code into three separate scripts: 1) global.R, 2) server.R, 3) ui.R 
+
+
 # Install required packages if not already installed
 #if (!requireNamespace("shiny", quietly = TRUE)) install.packages("shiny")
 #if (!requireNamespace("spocc", quietly = TRUE)) install.packages("spocc")
 #if (!requireNamespace("leaflet", quietly = TRUE)) install.packages("leaflet")
 #if (!requireNamespace("ldata.table", quietly = TRUE)) install.packages("data.table")
+
+# Note that quite a few lines of legacy code have been commented out below
 
 # Load required libraries
 library(tidyverse)
@@ -40,6 +47,8 @@ myModalData <- function() {
   )
 }
 
+# set up some links and widgets, mainly for top menu
+
 url_GBIF_format <- a("https://www.gbif.org/",style="font-weight:bold",href="https://www.gbif.org/",
                            target="_blank")
 
@@ -60,7 +69,8 @@ url_twitter_format <- a(icon("twitter"),style="font-weight:bold;font-size:18px",
 url_scholar_format <- a(icon("book-open"),style="font-weight:bold;font-size:18px",href="https://scholar.google.com/citations?user=zc_JEdUAAAAJ&hl=en",
                         target="_blank")
 
-
+# set up areas of interest for filtering data, besides whole world
+# this can/should be expanded to a larger list of areas of interest over time
 texas <- states(cb = TRUE) %>% filter(NAME == "Texas")
 #usa <- ne_countries(scale = "large", country = "United States of America", returnclass = "sf")
 #north_america <- ne_countries(scale = "large", continent = "North America", returnclass = "sf")
@@ -73,6 +83,7 @@ north_america<-c(-170,5,-50,83)
 
 geoms_list <- list(texas = texas, usa = usa, north_america = north_america)
 
+# choose basemaps to make available in toggle on leaflet
 providers<-c("Thunderforest.Outdoors","Esri.WorldImagery","CartoDB")
 
 # Load a simple world basemap
