@@ -1,4 +1,4 @@
-Powers SM. A shiny applications for rapid visualization of species occurrence databases.
+Powers SM. A shiny application for rapid visualization of species occurrence databases.
 
 Overview
 
